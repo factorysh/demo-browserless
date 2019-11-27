@@ -1,0 +1,13 @@
+{
+    "name": "tests",
+    "scripts": {
+        "test": "node_modules/.bin/mocha test.js"
+    },
+    "author": "Mathieu",
+    "private": true,
+    "dependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "selenium-webdriver": "^4.0.0-alpha.5"
+    }
+}

@@ -1,0 +1,24 @@
+---
+
+version: "3"
+
+services:
+
+  web:
+    image: demo-browserless
+    ports: # Just for debugging purpose
+      - 8000
+
+  browserless:
+    image: browserless/chrome
+    ports: # Just for debugging purpose
+      - 3000
+
+  test:
+    depends_on:
+      - browserless
+      - web
+    build:
+      context: .
+    entrypoint: /entrypoint.sh
+    command: mocha test.js
