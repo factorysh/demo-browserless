@@ -4,7 +4,7 @@ web-build:
 	docker build -t demo-browserless .
 
 test-build:
-	docker-compose -f tests/docker-compose.yml build --pull --build-arg UID=`id -u`
+	docker-compose -f tests/docker-compose.yml build --pull --build-arg UID=`id -u` test
 
 test:
 	docker-compose -f tests/docker-compose.yml up --exit-code-from test test
