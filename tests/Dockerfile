@@ -1,10 +1,10 @@
-FROM bearstech/node-dev:12 AS dev
+FROM bearstech/node-dev:16 AS dev
 
 COPY package.json yarn.lock /tests/
 WORKDIR /tests
 RUN yarn install
 
-FROM bearstech/node:12
+FROM bearstech/node:16
 
 RUN set -eux \
     &&  apt-get update \
